@@ -1,20 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f8fafc"/>
-      <stop offset="100%" stop-color="#eef2f7"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F4ED"/>
+      <stop offset="1" stop-color="#E7F0EF"/>
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="1240" cy="190" r="140" fill="#cbd5e1" opacity="0.45"/>
-  <circle cx="1330" cy="720" r="180" fill="#94a3b8" opacity="0.18"/>
-  <rect x="120" y="120" width="1360" height="660" rx="36" fill="#ffffff" stroke="#dbe1ea"/>
-  <text x="180" y="240" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="700" fill="#0f172a">PaylinkOps</text>
-  <text x="180" y="300" font-family="Inter, Arial, sans-serif" font-size="30" fill="#334155">Minimalist merchant ops for MoonPay CLI agents</text>
-  <text x="180" y="376" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" fill="#475569">Demo mode always works. Real mode uses the local mp CLI.</text>
-  <rect x="180" y="450" width="350" height="80" rx="18" fill="#0f172a"/>
-  <text x="232" y="502" font-family="Inter, Arial, sans-serif" font-size="26" fill="#ffffff">Create paylinks with receipts</text>
-  <rect x="180" y="570" width="350" height="80" rx="18" fill="#eef2f7" stroke="#cbd5e1"/>
-  <text x="230" y="622" font-family="Inter, Arial, sans-serif" font-size="26" fill="#0f172a">Track money end-to-end</text>
-</svg>
+  <circle cx="1305" cy="160" r="118" fill="#F1C792" fill-opacity="0.45"/>
+  <circle cx="1425" cy="722" r="160" fill="#194249" fill-opacity="0.08"/>
+  <rect x="122" y="112" width="1356" height="676" rx="40" fill="#FFFDF8" stroke="#E4DDD1" stroke-width="2"/>
 
+  <text x="192" y="238" fill="#153238" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="78" font-weight="700" letter-spacing="-2">PaylinkOps</text>
+  <text x="196" y="298" fill="#3B5B60" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="30" font-weight="500">MoonPay paylinks, payment tracking, and receipt-first operations</text>
+  <text x="196" y="350" fill="#607378" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="20">Demo mode always works. Real mode uses the local MoonPay CLI.</text>
+
+  <rect x="196" y="420" width="372" height="96" rx="24" fill="#16353B"/>
+  <text x="236" y="458" fill="#FFF7ED" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="21" font-weight="700">
+    <tspan x="236" dy="0">Create paylinks</tspan>
+    <tspan x="236" dy="25">with receipts</tspan>
+  </text>
+
+  <rect x="196" y="544" width="372" height="96" rx="24" fill="#F2EBDE" stroke="#E3D8C7" stroke-width="2"/>
+  <text x="236" y="582" fill="#17353B" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="21" font-weight="700">
+    <tspan x="236" dy="0">Track money</tspan>
+    <tspan x="236" dy="25">end to end</tspan>
+  </text>
+
+  <rect x="196" y="674" width="452" height="84" rx="24" fill="#F6F1E7" stroke="#E7DCCC" stroke-width="2"/>
+  <text x="230" y="722" fill="#26464C" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="15">operator tooling for reconciliation and treasury follow-through</text>
+
+  <rect x="832" y="170" width="520" height="520" rx="34" fill="#12343B"/>
+  <rect x="868" y="208" width="448" height="84" rx="24" fill="#F8F2E7"/>
+  <text x="906" y="242" fill="#7A6B56" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="16">REAL PROOF</text>
+  <text x="906" y="266" fill="#17353B" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="22" font-weight="700">
+    <tspan x="906" dy="0">wallet alias main</tspan>
+    <tspan x="906" dy="23">live deposit active</tspan>
+  </text>
+
+  <rect x="868" y="322" width="206" height="124" rx="26" fill="#1D4B53"/>
+  <text x="898" y="360" fill="#8BCFC3" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="15">MODE</text>
+  <text x="898" y="400" fill="#F9F4EA" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="29" font-weight="700">demo / real</text>
+
+  <rect x="1110" y="322" width="206" height="124" rx="26" fill="#F2E8D9"/>
+  <text x="1140" y="360" fill="#7C6A51" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="15">DEPOSIT</text>
+  <text x="1140" y="400" fill="#17353B" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="22" font-weight="700">69c0cc...e50c</text>
+
+  <rect x="868" y="474" width="448" height="104" rx="26" fill="#0E282E"/>
+  <text x="902" y="512" fill="#8BCFC3" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="15">RECEIPTS</text>
+  <text x="902" y="542" fill="#F7F1E6" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="22" font-weight="700">
+    <tspan x="902" dy="0">sanitized CLI output</tspan>
+    <tspan x="902" dy="23">parsed results, audit trail</tspan>
+  </text>
+
+  <text x="995" y="752" fill="#29474D" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="18">MoonPay CLI Agents / demo-safe operator flow</text>
+</svg>
