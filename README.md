@@ -40,6 +40,7 @@ The repo now has a verified local MoonPay CLI flow using a repo-local authentica
 
 - MoonPay CLI version: `1.12.4`
 - Real wallet alias: `main`
+- Live MoonPay destination wallet: `0x870F29bD50CE5fe3e29437BB46a000318B07aA47`
 - Real deposit id: `69c0cc009ec7c7dbcfb5e50c`
 - Real deposit status: `active`
 - Real deposit URL: [moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9](https://moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9)
@@ -48,7 +49,6 @@ The repo now has a verified local MoonPay CLI flow using a repo-local authentica
 ## Public demo
 
 - Production deployment: [paylinkops.vercel.app](https://paylinkops.vercel.app)
-- Deploy inspection: [vercel.com/we-lans-projects/paylinkops/7uxGacmw66FephEv1QaSku7g7hQ2](https://vercel.com/we-lans-projects/paylinkops/7uxGacmw66FephEv1QaSku7g7hQ2)
 
 ## On-chain evidence
 
@@ -72,6 +72,15 @@ Important note:
 - Separates a demo-safe path from the live CLI path, so the product stays judgeable even when live credentials are unavailable.
 - Keeps the proof chain honest: what is seeded, what is live, what is confirmed on-chain, and what is still missing.
 - Creates a practical bridge from paylink creation to reconciliation and treasury action, which is the real operational gap after a payment link exists.
+
+## Strongest judge proof right now
+
+- Public deployed app: [paylinkops.vercel.app](https://paylinkops.vercel.app)
+- Live MoonPay wallet: `0x870F29bD50CE5fe3e29437BB46a000318B07aA47`
+- Ethereum explorer: [etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
+- Base explorer: [basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
+- Live deposit id: `69c0cc009ec7c7dbcfb5e50c`
+- Deposit URL: [moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9](https://moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9)
 
 ## Local setup
 
