@@ -186,7 +186,7 @@ The public repo includes a judge-safe submission bundle in `submission/` with no
 
 - Real mode still depends on MoonPay platform availability and your local authenticated CLI state.
 - Final Synthesis publish remains blocked until explicit user confirmation.
-- There is still no confirmed inbound payment transaction hash in this repo flow because no live payment has been sent to the created deposit yet.
+- MoonPay CLI still had not surfaced the inbound transfer in `deposit transaction list` at capture time, so the strongest current proof is the confirmed chain explorer transaction.
 
 ## What is left before final submission
 
