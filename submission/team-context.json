@@ -13,6 +13,12 @@
       "This submission package assumes the only relevant team member for this project is the user."
     ]
   },
+  "project": {
+    "projectUUID": "b25d083bd33b487ebc78993a9792f672",
+    "name": "PaylinkOps",
+    "status": "draft",
+    "slug": "paylinkops-66ad"
+  },
   "submissionDefaults": {
     "repoURL": "https://github.com/p0s/PaylinkOps",
     "model": "codex 5.4",

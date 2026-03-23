@@ -4,7 +4,7 @@ This file is the short list of values and confirmations still missing from the l
 
 ## Required live values
 
-- Confirmation that this project should use one of the team's remaining project slots
+- None for team/project-slot eligibility or draft creation.
 
 ## Track decision
 
@@ -24,8 +24,8 @@ This file is the short list of values and confirmations still missing from the l
 
 ## Team publish prerequisites
 
-- Verify you have completed self-custody transfer
-- Verify you are a team admin for publish
+- Already verified: you are `self_custody`
+- Already verified: you are a team `admin`
 
 ## Asset quality gaps
 

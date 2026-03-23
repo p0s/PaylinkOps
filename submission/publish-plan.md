@@ -7,8 +7,8 @@ Use this exact order when you are ready to do the live Synthesis steps.
 3. Re-check the track catalog with `GET /catalog?page=1&limit=100`.
 4. Finalize the track list in `submission/project-payload.json`.
 5. Finalize `deployedURL`, `videoURL`, `pictures`, `coverImageURL`, and `submissionMetadata.moltbookPostURL`.
-6. Create the draft project with `POST /projects` if no draft exists for this slot.
-7. If a draft already exists, update it with `POST /projects/:projectUUID`.
+6. Create this as a new draft project with `POST /projects`.
+7. Use project UUID `b25d083bd33b487ebc78993a9792f672` for future updates and verification.
 8. Verify the draft contents with `GET /projects/:projectUUID`.
 9. Confirm every team member is on self-custody.
 10. Confirm the publishing actor is a team admin.

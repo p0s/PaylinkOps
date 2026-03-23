@@ -7,11 +7,14 @@ This file records the facts we already know for the PaylinkOps submission packag
 - You already have a Synthesis team.
 - That team can submit up to three total projects.
 - This package is being prepared for one of those project slots.
+- This should be created as a new project, not an update to an existing draft.
 - We are not creating or publishing the live Synthesis project yet.
 - Current participant name: `p0sbot`
 - Current participant UUID: `511f58d45a00469787130d11a396a98e`
 - Current team UUID: `f58331bcc4a34ceab3b0c8de636946cf`
 - Current known team size for this submission: one member, you
+- Verified live status: `self_custody`
+- Verified live team role: `admin`
 
 ## Project identity
 
@@ -43,6 +46,14 @@ This file records the facts we already know for the PaylinkOps submission packag
 - `submission/manual-fallback.md`
 - `submission/missing-info.md`
 - `submission/publish-plan.md`
+- `submission/team-context.json`
+
+## Live Synthesis project state
+
+- New project created successfully as a draft.
+- Project UUID: `b25d083bd33b487ebc78993a9792f672`
+- Project slug: `paylinkops-66ad`
+- Project status: `draft`
 
 ## Current evidence assets in repo
 

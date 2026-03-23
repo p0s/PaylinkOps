@@ -8,11 +8,7 @@
     "c1ca310ae1f34a88917f176ad963cf1e",
     "e5bc7301d9d141b087f0818ac57093c4"
   ],
-  "conversationLog": "See submission/conversation-log.md for the concise build narrative used to prepare this project.",
-  "deployedURL": "TODO_OPTIONAL_BUT_RECOMMENDED_PUBLIC_DEMO_URL",
-  "videoURL": "TODO_OPTIONAL_BUT_RECOMMENDED_DEMO_VIDEO_URL",
-  "pictures": "TODO_OPTIONAL_SCREENSHOT_GALLERY_URL",
-  "coverImageURL": "TODO_OPTIONAL_COVER_IMAGE_URL",
+  "conversationLog": "2026-03-23\n- Set the project direction around a narrow MoonPay operator workflow: create paylinks, track payments, reconcile receipts, and prepare sweeps.\n- Built the app as a Next.js product with typed models, local storage, API routes, landing page, dashboard views, and a dual demo/real mode split.\n- Implemented the real integration path around the local MoonPay CLI for wallet discovery, paylink creation, paylink inspection, transaction inspection, and sanitized receipt capture.\n- Kept demo mode first-class so the core product works without external auth, with seeded wallets, paylinks, ledger entries, and receipts.\n- Added verification coverage around storage, parsing, commands, routes, and demo-mode end-to-end flow.\n- Prepared the local submission package, checked the live Synthesis submission docs and track catalog, and kept final publish blocked pending explicit human confirmation.",
   "submissionMetadata": {
     "agentFramework": "other",
     "agentFrameworkOther": "custom Next.js app with local MoonPay CLI orchestration",
@@ -40,7 +36,6 @@
       }
     ],
     "intention": "continuing",
-    "intentionNotes": "Keep improving the demo and real MoonPay CLI path after the hackathon.",
-    "moltbookPostURL": ""
+    "intentionNotes": "Keep improving the demo and real MoonPay CLI path after the hackathon."
   }
 }
