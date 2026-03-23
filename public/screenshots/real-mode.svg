@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f7f8fb"/>
+  <rect x="80" y="80" width="1440" height="740" rx="28" fill="#ffffff" stroke="#dbe1ea"/>
+  <text x="140" y="180" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700" fill="#0f172a">Real mode</text>
+  <text x="140" y="250" font-family="Inter, Arial, sans-serif" font-size="26" fill="#475569">MoonPay CLI detected locally.</text>
+  <rect x="140" y="320" width="1320" height="74" rx="18" fill="#f8fafc" stroke="#dbe1ea"/>
+  <text x="180" y="368" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" fill="#0f172a">mp wallet list</text>
+  <rect x="140" y="420" width="1320" height="74" rx="18" fill="#f8fafc" stroke="#dbe1ea"/>
+  <text x="180" y="468" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" fill="#0f172a">mp deposit create --name ...</text>
+</svg>
+

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f7f8fb"/>
+  <rect x="80" y="80" width="1440" height="740" rx="28" fill="#ffffff" stroke="#dbe1ea"/>
+  <text x="140" y="190" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" fill="#334155">PaylinkOps</text>
+  <text x="140" y="250" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="700" fill="#0f172a">MoonPay-ready merchant ops</text>
+  <text x="140" y="320" font-family="Inter, Arial, sans-serif" font-size="28" fill="#475569">Demo mode always works. Real mode uses the local mp CLI.</text>
+  <rect x="140" y="390" width="220" height="62" rx="16" fill="#0f172a"/>
+  <text x="180" y="431" font-family="Inter, Arial, sans-serif" font-size="24" fill="#ffffff">Open Dashboard</text>
+  <rect x="390" y="390" width="220" height="62" rx="16" fill="#eef2f7" stroke="#cbd5e1"/>
+  <text x="435" y="431" font-family="Inter, Arial, sans-serif" font-size="24" fill="#0f172a">Try demo</text>
+</svg>
+
