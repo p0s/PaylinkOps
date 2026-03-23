@@ -50,6 +50,12 @@ The repo now has a verified local MoonPay CLI flow using a repo-local authentica
 
 - Production deployment: [paylinkops.xyz](https://paylinkops.xyz)
 
+## Screenshot
+
+- Public screenshot: [raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png](https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png)
+
+![PaylinkOps screenshot](https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png)
+
 ## On-chain evidence
 
 The strongest public chain evidence currently available is the live destination wallet and the prior Synthesis registration transaction.
@@ -165,6 +171,7 @@ flowchart LR
 - Cover image: `public/cover.png`
 - Additional cover source: `public/cover.svg`
 - Screenshot assets: `public/screenshots/`
+- Primary judge screenshot: `public/screenshots/paylinkops-screenshot.png`
 
 ## Submission assets
 

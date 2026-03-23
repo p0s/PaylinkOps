@@ -11,6 +11,6 @@
   "submissionMetadata": "See submission/submission-metadata.json",
   "deployedURL": "https://paylinkops.xyz",
   "videoURL": "",
-  "pictures": "",
+  "pictures": "https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png",
   "coverImageURL": ""
 }

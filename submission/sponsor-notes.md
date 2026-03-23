@@ -19,6 +19,7 @@ PaylinkOps fits the MoonPay CLI Agents prize because MoonPay CLI is the actual a
 ## Strongest public evidence
 
 - Deployed app: [paylinkops.xyz](https://paylinkops.xyz)
+- Public screenshot: [raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png](https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png)
 - Live MoonPay wallet: `0x870F29bD50CE5fe3e29437BB46a000318B07aA47`
 - Ethereum explorer: [etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
 - Base explorer: [basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
@@ -37,6 +38,7 @@ PaylinkOps fits the MoonPay CLI Agents prize because MoonPay CLI is the actual a
 ## Core benefits for judges
 
 - Real MoonPay evidence exists now, not just mocked fixtures.
+- The public screenshot is committed in-repo and can be opened directly from GitHub without needing any private asset host.
 - Demo mode guarantees a full product walkthrough even if the live CLI path is temporarily unavailable.
 - Receipt-first logging makes every live action inspectable instead of forcing judges to trust screenshots or console claims.
 - The product solves a specific merchant-ops problem: creating deposit links is easy, but tracking and reconciling them cleanly is not.

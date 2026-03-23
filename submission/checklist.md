@@ -8,6 +8,7 @@
 - [x] Real MoonPay wallet `main` created
 - [x] Real MoonPay deposit link created
 - [x] Explorer links documented in README and submission notes
+- [x] Public screenshot committed and linked from GitHub raw
 - [x] Lint passes
 - [x] Typecheck passes
 - [x] Unit tests pass
