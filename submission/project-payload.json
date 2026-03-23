@@ -1,0 +1,46 @@
+{
+  "teamUUID": "f58331bcc4a34ceab3b0c8de636946cf",
+  "name": "PaylinkOps",
+  "description": "A minimalist merchant operations console for AI agents and crypto-native teams that creates MoonPay deposit links, tracks incoming payments, reconciles receipts, and prepares treasury sweeps using MoonPay CLI as the real money rail.",
+  "problemStatement": "Crypto-native operators need a local-first way to create paylinks, observe payment arrival, reconcile receipts, and keep a durable audit trail without building a full accounting stack.",
+  "repoURL": "https://github.com/p0s/PaylinkOps",
+  "trackUUIDs": [
+    "c1ca310ae1f34a88917f176ad963cf1e",
+    "e5bc7301d9d141b087f0818ac57093c4"
+  ],
+  "conversationLog": "See submission/conversation-log.md for the concise build narrative used to prepare this project.",
+  "deployedURL": "TODO_OPTIONAL_BUT_RECOMMENDED_PUBLIC_DEMO_URL",
+  "videoURL": "TODO_OPTIONAL_BUT_RECOMMENDED_DEMO_VIDEO_URL",
+  "pictures": "TODO_OPTIONAL_SCREENSHOT_GALLERY_URL",
+  "coverImageURL": "TODO_OPTIONAL_COVER_IMAGE_URL",
+  "submissionMetadata": {
+    "agentFramework": "other",
+    "agentFrameworkOther": "custom Next.js app with local MoonPay CLI orchestration",
+    "agentHarness": "codex-cli",
+    "model": "codex 5.4",
+    "skills": [
+      "web-search"
+    ],
+    "tools": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vitest",
+      "Playwright",
+      "MoonPay CLI"
+    ],
+    "helpfulResources": [
+      "https://synthesis.devfolio.co/submission/skill.md",
+      "https://synthesis.devfolio.co/catalog?page=1&limit=100"
+    ],
+    "helpfulSkills": [
+      {
+        "name": "web-search",
+        "reason": "Used to fetch the live Synthesis submission skill and catalog so the submission bundle matches the current schema and track UUIDs."
+      }
+    ],
+    "intention": "continuing",
+    "intentionNotes": "Keep improving the demo and real MoonPay CLI path after the hackathon.",
+    "moltbookPostURL": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "entries": [
+    {
+      "step": "scaffold",
+      "status": "completed",
+      "summary": "Set up the app shell, local storage, and MoonPay adapter layers."
+    },
+    {
+      "step": "submission-prep",
+      "status": "completed",
+      "summary": "Prepared README, submission metadata, track notes, sponsor notes, and demo script."
+    },
+    {
+      "step": "submission-gate",
+      "status": "blocked",
+      "summary": "Final submit remains blocked until the user explicitly confirms it."
+    }
+  ]
+}
+

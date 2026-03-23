@@ -1,0 +1,20 @@
+{
+  "project": "PaylinkOps",
+  "agent": {
+    "framework": "other",
+    "harness": "codex-cli",
+    "model": "gpt-5"
+  },
+  "capabilities": [
+    "create paylinks",
+    "inspect wallets",
+    "reconcile receipts",
+    "plan sweeps",
+    "prepare submission artifacts"
+  ],
+  "limits": [
+    "real MoonPay actions require local mp authentication",
+    "final Synthesis publish requires explicit user confirmation"
+  ]
+}
+
