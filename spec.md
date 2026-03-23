@@ -61,7 +61,8 @@ It is specific, useful, sponsor-shaped, and realistic.
 
 ### Secondary / optional sponsor target
 - **OpenWallet Standard**
-  - only include as a secondary submission target if the local-first wallet profile and policy abstraction are polished and defensible
+  - treat this as an optional future extension path, not a core current claim
+  - only include as a secondary submission target if the wallet layer becomes polished and clearly defensible
   - do not force extra complexity just to chase this
 
 ### Explicitly avoid
@@ -722,7 +723,7 @@ Do not hardcode stale assumptions if the live docs differ.
 ### 16.2 `tracks.md`
 Recommended tracks:
 - primary: MoonPay CLI Agents
-- optional secondary: OpenWallet Standard (only if the wallet abstraction is polished enough)
+- optional secondary: OpenWallet Standard (only if the wallet layer becomes strong enough to defend as more than future roadmap)
 
 Do **not** include any track already used in the user's first project.
 

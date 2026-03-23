@@ -15,7 +15,7 @@ The core promise is simple: create a payment link, track the money, and keep aud
 
 Primary track: MoonPay CLI Agents.
 
-Secondary track: OpenWallet Standard, used only as a secondary fit because the app also leans on a local-first wallet abstraction.
+Secondary track: OpenWallet Standard is only a possible future extension if the wallet layer becomes strong enough to stand on its own.
 
 ## What is included
 
@@ -88,18 +88,7 @@ flowchart LR
 
 ## Submission assets
 
-The `submission/` folder contains:
-
-- `submission/submission-metadata.json`
-- `submission/project-payload.json`
-- `submission/tracks.md`
-- `submission/sponsor-notes.md`
-- `submission/demo-script.md`
-- `submission/checklist.md`
-- `submission/conversation-log.md`
-- `submission/agent.json`
-- `submission/agent_log.json`
-- `submission/manual-fallback.md`
+Submission-specific metadata, team identifiers, project identifiers, and publish notes are intentionally kept in a local gitignored `submission/` folder when needed. Do not commit live submission payloads or other private operational context to the public repo.
 
 ## Honest limitations
 
@@ -112,4 +101,3 @@ The `submission/` folder contains:
 - Better real-mode transaction parsing from broader MoonPay CLI output shapes.
 - Optional sweep execution behind the existing confirmation gate.
 - CSV export for ledger and receipts.
-
