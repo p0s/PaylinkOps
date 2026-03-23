@@ -1,13 +1,31 @@
+import { access } from 'node:fs/promises';
 import * as childProcess from 'node:child_process';
+import path from 'node:path';
 import { promisify } from 'node:util';
 import { AppConfig } from '@/lib/config';
 import { CliReceipt } from '@/lib/moonpay/adapter';
 
 const run = promisify(childProcess.execFile);
 
+async function resolveCliBinary(): Promise<string> {
+  for (const candidate of AppConfig.cliBinaryCandidates) {
+    if (candidate.includes('/')) {
+      const absolute = path.resolve(process.cwd(), candidate);
+      try {
+        await access(absolute);
+        return absolute;
+      } catch {
+        continue;
+      }
+    }
+    return candidate;
+  }
+  return AppConfig.cliBinary;
+}
+
 export async function runCliCommand(args: string[], timeoutMs = AppConfig.cliTimeoutMs): Promise<CliReceipt> {
   const start = Date.now();
-  const command = AppConfig.cliBinary;
+  const command = await resolveCliBinary();
 
   try {
     const result = await run(command, args, {

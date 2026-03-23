@@ -12,6 +12,7 @@
     "test": "vitest run",
     "test:unit": "vitest run tests/unit",
     "test:e2e": "playwright test",
+    "test:e2e:orbstack": "sh ./scripts/test-e2e-orbstack.sh",
     "test:smoke": "tsx scripts/verify-real-mode.ts",
     "prepare-submission": "tsx scripts/prepare-submission.ts",
     "seed-demo": "tsx scripts/seed-demo.ts",
