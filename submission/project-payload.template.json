@@ -1,0 +1,16 @@
+{
+  "teamUUID": "FILL_FROM_PRIVATE_TEAM_CONTEXT",
+  "name": "PaylinkOps",
+  "description": "A minimalist merchant operations console for AI agents and crypto-native teams that creates MoonPay deposit links, tracks incoming payments, reconciles receipts, and prepares treasury sweeps using MoonPay CLI as the real money rail.",
+  "problemStatement": "Crypto-native operators need a local-first way to create paylinks, observe payment arrival, reconcile receipts, and keep a durable audit trail without building a full accounting stack.",
+  "repoURL": "https://github.com/p0s/PaylinkOps",
+  "trackUUIDs": [
+    "FILL_TRACK_UUIDS"
+  ],
+  "conversationLog": "See submission/demo-script.md and public repo history for the concise build narrative.",
+  "submissionMetadata": "See submission/submission-metadata.json",
+  "deployedURL": "",
+  "videoURL": "",
+  "pictures": "",
+  "coverImageURL": ""
+}

@@ -1,0 +1,33 @@
+{
+  "agentFramework": "other",
+  "agentFrameworkOther": "custom Next.js app with local MoonPay CLI orchestration",
+  "agentHarness": "codex-cli",
+  "model": "gpt-5 / codex",
+  "skills": [
+    "web-search"
+  ],
+  "tools": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Vitest",
+    "Playwright",
+    "MoonPay CLI",
+    "OrbStack",
+    "Docker"
+  ],
+  "helpfulResources": [
+    "https://synthesis.devfolio.co/submission/skill.md",
+    "https://synthesis.devfolio.co/skill.md",
+    "https://www.moonpay.com/"
+  ],
+  "helpfulSkills": [
+    {
+      "name": "web-search",
+      "reason": "Used to re-check the current Synthesis submission method and avoid stale payload assumptions."
+    }
+  ],
+  "intention": "continuing",
+  "intentionNotes": "Continue hardening the real MoonPay path, capture a confirmed live payment transaction, and improve the wallet/policy layer.",
+  "moltbookPostURL": ""
+}
