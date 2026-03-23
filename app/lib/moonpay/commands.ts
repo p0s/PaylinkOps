@@ -23,18 +23,32 @@ async function resolveCliBinary(): Promise<string> {
   return AppConfig.cliBinary;
 }
 
+async function resolveMoonPayEnv(): Promise<NodeJS.ProcessEnv> {
+  const env: NodeJS.ProcessEnv = {
+    ...process.env,
+  };
+  const localHome = path.resolve(process.cwd(), AppConfig.moonpayHomePath);
+  try {
+    await access(localHome);
+    env.HOME = localHome;
+    env.XDG_CONFIG_HOME = path.join(localHome, '.config');
+  } catch {
+    return env;
+  }
+  return env;
+}
+
 export async function runCliCommand(args: string[], timeoutMs = AppConfig.cliTimeoutMs): Promise<CliReceipt> {
   const start = Date.now();
   const command = await resolveCliBinary();
+  const env = await resolveMoonPayEnv();
 
   try {
     const result = await run(command, args, {
       timeout: timeoutMs,
       maxBuffer: 1_000_000,
       windowsHide: true,
-      env: {
-        ...process.env,
-      },
+      env,
       encoding: 'utf8',
     });
 
