@@ -1,0 +1,46 @@
+{
+  "name": "paylinkops",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:e2e": "playwright test",
+    "test:e2e:orbstack": "sh ./scripts/test-e2e-orbstack.sh",
+    "test:smoke": "tsx scripts/verify-real-mode.ts",
+    "prepare-submission": "tsx scripts/prepare-submission.ts",
+    "seed-demo": "tsx scripts/seed-demo.ts",
+    "verify-submission": "tsx scripts/capture-screenshots.ts"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "next": "15.2.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@playwright/test": "^1.52.0",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.30.0",
+    "eslint-config-next": "15.2.4",
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.0.14",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.4"
+  }
+}

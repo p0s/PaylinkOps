@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold;
+}
+
+.btn:hover {
+  @apply bg-slate-50;
+}
+
+.btn-primary {
+  @apply border-slate-900 bg-slate-900 text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-slate-700;
+}
+
+.table {
+  @apply w-full border-collapse;
+}
+
+.table th {
+  @apply border-b border-slate-200 px-3 py-2 text-left text-sm font-semibold;
+}
+
+.table td {
+  @apply border-b border-slate-100 px-3 py-2 text-sm;
+}
+
+.code {
+  @apply rounded-lg bg-slate-900 p-4 font-mono text-xs text-lime-50;
+}
