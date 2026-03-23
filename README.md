@@ -2,6 +2,13 @@
 
 PaylinkOps is a minimalist merchant operations console for AI agents and crypto-native teams. It creates MoonPay deposit links, tracks incoming payments, reconciles receipts, and prepares treasury sweeps.
 
+## Live demo
+
+- Public demo: [https://paylinkops.xyz](https://paylinkops.xyz)
+- Public dashboard: [https://paylinkops.xyz/dashboard](https://paylinkops.xyz/dashboard)
+- Public screenshot: [https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png](https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png)
+- Public cover image: [https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/cover.png](https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/cover.png)
+
 It has two operating modes:
 
 - `Demo mode` works out of the box with seeded wallets, paylinks, ledger entries, and receipts.
@@ -10,6 +17,19 @@ It has two operating modes:
 ## Why it exists
 
 The core promise is simple: create a payment link, track the money, and keep auditable receipts. That is the smallest useful MoonPay-shaped product that still demonstrates real CLI value instead of a generic wallet demo.
+
+## Why this is useful
+
+MoonPay already gives agents powerful execution rails. The missing layer is operator trust after execution starts. Teams still need to know:
+
+- which wallet is active
+- which paylink was created
+- whether payment arrived
+- whether it matched the expected amount
+- what raw proof exists
+- what treasury action should happen next
+
+PaylinkOps solves that operational gap instead of stopping at a single CLI action.
 
 ## Sponsor fit
 
@@ -45,16 +65,11 @@ The repo now has a verified local MoonPay CLI flow using a repo-local authentica
 - Real deposit status: `active`
 - Real deposit URL: [moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9](https://moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9)
 - Real deposit retrieval through CLI was re-checked in this workspace on `2026-03-23`
+- Confirmed inbound Ethereum payment tx: [https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54](https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54)
 
 ## Public demo
 
 - Production deployment: [paylinkops.xyz](https://paylinkops.xyz)
-
-## Screenshot
-
-- Public screenshot: [raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png](https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png)
-
-![PaylinkOps screenshot](https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png)
 
 ## On-chain evidence
 
@@ -66,6 +81,7 @@ The strongest public chain evidence currently available is the live destination 
 - Bitcoin wallet: `bc1qqkjqqf2zzvgrfvdy0ecrx30wyjuha0f8gcj7lv`
 - Bitcoin explorer: [mempool.space/address/bc1qqkjqqf2zzvgrfvdy0ecrx30wyjuha0f8gcj7lv](https://mempool.space/address/bc1qqkjqqf2zzvgrfvdy0ecrx30wyjuha0f8gcj7lv)
 - Synthesis registration transaction: [basescan.org/tx/0x30806b449bf3e1b5e740b94ed9ebcc4c278f40fec702d9f905940263c526b8f7](https://basescan.org/tx/0x30806b449bf3e1b5e740b94ed9ebcc4c278f40fec702d9f905940263c526b8f7)
+- Confirmed inbound payment tx: [etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54](https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54)
 
 Important note:
 
@@ -83,6 +99,13 @@ Important note:
 - Keeps the proof chain honest: what is seeded, what is live, what is confirmed on-chain, and what is still missing.
 - Creates a practical bridge from paylink creation to reconciliation and treasury action, which is the real operational gap after a payment link exists.
 
+## Why this is stronger than a basic CLI demo
+
+- It proves the sponsor rail with live wallet, live deposit, and confirmed on-chain payment evidence.
+- It keeps receipts as first-class product objects instead of burying output in terminal history.
+- It gives judges both a public demo path and a live sponsor-backed path.
+- It demonstrates the complete operator loop instead of a single successful command.
+
 ## Strongest judge proof right now
 
 - Public deployed app: [paylinkops.xyz](https://paylinkops.xyz)
@@ -92,6 +115,23 @@ Important note:
 - Live deposit id: `69c0cc009ec7c7dbcfb5e50c`
 - Deposit URL: [moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9](https://moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9)
 - Confirmed inbound tx: [etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54](https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54)
+- Public screenshot: [https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png](https://raw.githubusercontent.com/p0s/PaylinkOps/main/public/screenshots/paylinkops-screenshot.png)
+
+## Screens and workflow
+
+- `/dashboard` operator overview
+- `/dashboard/wallets` live or seeded wallet view
+- `/dashboard/paylinks` create and inspect paylinks
+- `/dashboard/paylinks/[id]` paylink detail and transaction evidence
+- `/dashboard/ledger` expected-versus-received reconciliation
+- `/dashboard/receipts` raw receipts and export
+- `/dashboard/settings` mode switch and real-mode environment state
+
+## Demo vs real mode
+
+- `demo` mode always works and is the public-safe default on the deployed app
+- `real` mode uses the actual local MoonPay CLI and authenticated wallet state
+- on the public deployment, demo mode is the default path; the live MoonPay proof is still documented and real, but the hosted environment does not carry your private local CLI session
 
 ## Local setup
 
