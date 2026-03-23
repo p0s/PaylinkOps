@@ -1,5 +1,16 @@
 # Submission Folder
 
-This folder is reserved for local, gitignored submission materials.
+This folder is the public-safe submission bundle for PaylinkOps.
 
-Keep live submission payloads, team identifiers, project identifiers, and publish notes out of the public repo. Final publish should remain an explicit manual step.
+Included here:
+
+- sponsor framing
+- on-chain evidence
+- screenshot and deploy references
+- demo script
+- checklist
+- agent artifacts
+- manual fallback notes
+- a conversation log for judges
+
+Private team identifiers and final publish payloads still live in `.secrets/`.
