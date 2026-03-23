@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="123" y1="73" x2="1455" y2="844" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF6E8"/>
+      <stop offset="0.48" stop-color="#F4F0E6"/>
+      <stop offset="1" stop-color="#DCEEF0"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="979" y1="155" x2="1426" y2="728" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12343B"/>
+      <stop offset="1" stop-color="#0B2025"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="228" y1="519" x2="537" y2="519" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EF7D42"/>
+      <stop offset="1" stop-color="#F3B24D"/>
+    </linearGradient>
+    <filter id="shadow" x="730" y="95" width="696" height="664" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="-12" dy="18"/>
+      <feGaussianBlur stdDeviation="24"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.12549 0 0 0 0 0.14902 0 0 0 0.18 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1408" cy="160" r="126" fill="#F7C58A" fill-opacity="0.42"/>
+  <circle cx="152" cy="815" r="192" fill="#C7E2E4" fill-opacity="0.58"/>
+  <circle cx="1221" cy="807" r="164" fill="#103E46" fill-opacity="0.08"/>
+  <path d="M147 154C147 125.833 169.833 103 198 103H768C796.167 103 819 125.833 819 154V746C819 774.167 796.167 797 768 797H198C169.833 797 147 774.167 147 746V154Z" fill="#FFFDF9"/>
+  <path d="M147 154C147 125.833 169.833 103 198 103H768C796.167 103 819 125.833 819 154V746C819 774.167 796.167 797 768 797H198C169.833 797 147 774.167 147 746V154Z" stroke="#E9E1D2" stroke-width="2"/>
+  <text x="224" y="208" fill="#143238" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="76" font-weight="700" letter-spacing="-2">PaylinkOps</text>
+  <text x="228" y="260" fill="#36545B" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="27" font-weight="500">MoonPay paylinks, payment tracking, and receipt-first operations</text>
+  <text x="228" y="325" fill="#4E676C" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="21">Demo mode always works. Real mode uses the local MoonPay CLI.</text>
+  <rect x="228" y="410" width="309" height="62" rx="20" fill="url(#accent)"/>
+  <text x="262" y="450" fill="#FFF9F2" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="26" font-weight="700">Create paylinks with receipts</text>
+  <rect x="228" y="496" width="256" height="56" rx="18" fill="#F6EFE2"/>
+  <text x="256" y="531" fill="#19343A" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="24" font-weight="600">Track money end to end</text>
+  <rect x="228" y="580" width="474" height="136" rx="24" fill="#F7F3EA" stroke="#E6DCCD"/>
+  <text x="257" y="623" fill="#6F7E82" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="17">WHY IT EXISTS</text>
+  <text x="257" y="662" fill="#153238" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="30" font-weight="600">Operator tooling for the moment</text>
+  <text x="257" y="699" fill="#153238" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="30" font-weight="600">between payment link creation</text>
+  <text x="257" y="736" fill="#153238" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="30" font-weight="600">and auditable reconciliation.</text>
+  <g filter="url(#shadow)">
+    <rect x="787" y="125" width="591" height="568" rx="34" fill="url(#panel)"/>
+    <rect x="829" y="167" width="507" height="76" rx="24" fill="#F9F3E8"/>
+    <circle cx="876" cy="205" r="11" fill="#F09A52"/>
+    <circle cx="909" cy="205" r="11" fill="#E3C36C"/>
+    <circle cx="942" cy="205" r="11" fill="#4FA39B"/>
+    <text x="982" y="212" fill="#17363C" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="22">paylinkops / operator dashboard</text>
+    <rect x="829" y="275" width="218" height="118" rx="26" fill="#194850"/>
+    <text x="859" y="319" fill="#7DC8BC" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="16">MODE</text>
+    <text x="859" y="361" fill="#F7F1E5" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="38" font-weight="700">demo / real</text>
+    <rect x="861" y="375" width="104" height="6" rx="3" fill="#F09A52"/>
+    <rect x="1068" y="275" width="268" height="118" rx="26" fill="#F5EBDD"/>
+    <text x="1099" y="319" fill="#83725B" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="16">LIVE DEPOSIT</text>
+    <text x="1099" y="361" fill="#17363C" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="35" font-weight="700">active paylink</text>
+    <text x="1099" y="389" fill="#48626A" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="17">69c0cc009ec7c7dbcfb5e50c</text>
+    <rect x="829" y="420" width="507" height="120" rx="26" fill="#0F2A30"/>
+    <text x="861" y="459" fill="#7DC8BC" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="16">RECEIPT LOG</text>
+    <text x="861" y="500" fill="#F7F1E5" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="31" font-weight="700">mp deposits create</text>
+    <text x="861" y="532" fill="#9AB0B4" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="18">sanitized stdout, stderr, parsed response</text>
+    <rect x="829" y="567" width="238" height="83" rx="24" fill="#F09A52"/>
+    <text x="860" y="602" fill="#FFF8F0" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="15">RECONCILIATION</text>
+    <text x="860" y="635" fill="#FFF8F0" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="33" font-weight="700">expected vs paid</text>
+    <rect x="1090" y="567" width="246" height="83" rx="24" fill="#D6ECEA"/>
+    <text x="1120" y="602" fill="#466166" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="15">TREASURY</text>
+    <text x="1120" y="635" fill="#143238" font-family="'Avenir Next', 'Segoe UI', sans-serif" font-size="33" font-weight="700">sweep planning</text>
+  </g>
+  <text x="1094" y="780" fill="#24464D" font-family="'IBM Plex Mono', 'SFMono-Regular', monospace" font-size="18">MoonPay CLI Agents  /  demo-safe operator flow</text>
+</svg>
