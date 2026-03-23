@@ -2,31 +2,65 @@
 
 :root {
   color-scheme: light;
+  --app-bg: #fafafa;
+  --app-fg: #111111;
+  --panel: rgba(255, 255, 255, 0.88);
+  --panel-solid: #ffffff;
+  --muted: #6b7280;
+  --border: rgba(17, 17, 17, 0.08);
+  --soft: #f3f4f6;
+  --soft-strong: #e5e7eb;
+  --code-bg: #111111;
+  --code-fg: #f5f5f5;
+}
+
+html.dark {
+  color-scheme: dark;
+  --app-bg: #000000;
+  --app-fg: #fafafa;
+  --panel: rgba(10, 10, 10, 0.88);
+  --panel-solid: #0a0a0a;
+  --muted: #a1a1aa;
+  --border: rgba(255, 255, 255, 0.12);
+  --soft: #111111;
+  --soft-strong: #1f1f1f;
+  --code-bg: #0b0b0b;
+  --code-fg: #fafafa;
 }
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--app-bg);
+  color: var(--app-fg);
 }
 
 .card {
-  @apply rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm;
+  @apply rounded-2xl p-5 shadow-sm;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02), 0 16px 40px rgba(0, 0, 0, 0.06);
 }
 
 .btn {
-  @apply inline-flex items-center justify-center rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold;
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold transition-colors duration-150;
+  border: 1px solid var(--border);
+  background: var(--panel-solid);
+  color: var(--app-fg);
 }
 
 .btn:hover {
-  @apply bg-slate-50;
+  background: var(--soft);
 }
 
 .btn-primary {
-  @apply border-slate-900 bg-slate-900 text-white;
+  border-color: #111111;
+  background: #111111;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  @apply bg-slate-700;
+  background: #2a2a2a;
 }
 
 .table {
@@ -34,13 +68,17 @@ body {
 }
 
 .table th {
-  @apply border-b border-slate-200 px-3 py-2 text-left text-sm font-semibold;
+  @apply px-3 py-2 text-left text-sm font-semibold;
+  border-bottom: 1px solid var(--border);
 }
 
 .table td {
-  @apply border-b border-slate-100 px-3 py-2 text-sm;
+  @apply px-3 py-2 text-sm;
+  border-bottom: 1px solid var(--border);
 }
 
 .code {
-  @apply rounded-lg bg-slate-900 p-4 font-mono text-xs text-lime-50;
+  @apply rounded-lg p-4 font-mono text-xs;
+  background: var(--code-bg);
+  color: var(--code-fg);
 }

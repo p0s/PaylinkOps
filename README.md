@@ -48,7 +48,7 @@ The repo now has a verified local MoonPay CLI flow using a repo-local authentica
 
 ## Public demo
 
-- Production deployment: [paylinkops.vercel.app](https://paylinkops.vercel.app)
+- Production deployment: [paylinkops.xyz](https://paylinkops.xyz)
 
 ## On-chain evidence
 
@@ -75,7 +75,7 @@ Important note:
 
 ## Strongest judge proof right now
 
-- Public deployed app: [paylinkops.vercel.app](https://paylinkops.vercel.app)
+- Public deployed app: [paylinkops.xyz](https://paylinkops.xyz)
 - Live MoonPay wallet: `0x870F29bD50CE5fe3e29437BB46a000318B07aA47`
 - Ethereum explorer: [etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
 - Base explorer: [basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)

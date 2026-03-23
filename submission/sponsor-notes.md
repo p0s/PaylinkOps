@@ -18,7 +18,7 @@ PaylinkOps fits the MoonPay CLI Agents prize because MoonPay CLI is the actual a
 
 ## Strongest public evidence
 
-- Deployed app: [paylinkops.vercel.app](https://paylinkops.vercel.app)
+- Deployed app: [paylinkops.xyz](https://paylinkops.xyz)
 - Live MoonPay wallet: `0x870F29bD50CE5fe3e29437BB46a000318B07aA47`
 - Ethereum explorer: [etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
 - Base explorer: [basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
