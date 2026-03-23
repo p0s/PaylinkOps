@@ -14,7 +14,8 @@ PaylinkOps fits the MoonPay CLI Agents prize because MoonPay CLI is the actual a
 - Verified live deposit status: `active`
 - Verified live deposit URL: [moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9](https://moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9)
 - Verified live deposit retrieval in the local CLI on `2026-03-23`
-- Verified live deposit transaction list currently returns no inbound transactions yet
+- Verified confirmed inbound chain payment tx: [etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54](https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54)
+- Verified live deposit transaction list currently still returns no inbound transactions, which appears to be MoonPay-side indexing lag at the time of capture
 
 ## Strongest public evidence
 
@@ -25,6 +26,7 @@ PaylinkOps fits the MoonPay CLI Agents prize because MoonPay CLI is the actual a
 - Base explorer: [basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
 - Live deposit id: `69c0cc009ec7c7dbcfb5e50c`
 - Deposit URL: [moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9](https://moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9)
+- Confirmed inbound payment tx: [etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54](https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54)
 
 ## On-chain references
 
@@ -51,4 +53,4 @@ PaylinkOps fits the MoonPay CLI Agents prize because MoonPay CLI is the actual a
 
 ## Honest gap
 
-No confirmed inbound payment transaction has been executed yet, so there is not yet a payment tx hash to include as settlement proof.
+The chain payment is confirmed, but MoonPay CLI has not yet surfaced that inbound transfer in `deposit transaction list`, so the chain explorer is the strongest proof at capture time.

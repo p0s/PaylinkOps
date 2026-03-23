@@ -16,5 +16,5 @@
 - [x] Demo e2e passes through OrbStack/Docker
 - [x] Public deployment URL added
 - [ ] Demo video URL added
-- [ ] Real incoming payment tx hash captured
+- [x] Real incoming payment tx hash captured
 - [ ] Final Synthesis publish explicitly confirmed by user

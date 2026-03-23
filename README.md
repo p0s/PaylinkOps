@@ -69,7 +69,11 @@ The strongest public chain evidence currently available is the live destination 
 
 Important note:
 
-- A real MoonPay deposit link has been created, but no inbound on-chain payment transaction has been executed yet in this repo workflow, so there is no confirmed payment tx hash to show judges yet.
+- A real MoonPay deposit link has been created and funded on-chain.
+- Confirmed inbound Ethereum payment tx: [etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54](https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54)
+- Sender wallet used for proof: `0xc5CfE770F01A308DF5D840d0Eb15f0b4cF264C81`
+- Value sent to MoonPay deposit address: `0.0001 ETH`
+- MoonPay CLI deposit transaction indexing was still empty at capture time, so the strongest current proof is the confirmed chain tx itself.
 
 ## Core benefits
 
@@ -87,6 +91,7 @@ Important note:
 - Base explorer: [basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://basescan.org/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
 - Live deposit id: `69c0cc009ec7c7dbcfb5e50c`
 - Deposit URL: [moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9](https://moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9)
+- Confirmed inbound tx: [etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54](https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54)
 
 ## Local setup
 
@@ -186,5 +191,4 @@ The public repo includes a judge-safe submission bundle in `submission/` with no
 ## What is left before final submission
 
 - Optional but recommended demo video URL.
-- A real incoming payment tx hash if you want stronger on-chain proof than wallet/deposit evidence alone.
 - Final human confirmation before Synthesis publish.
