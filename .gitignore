@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.secrets/
+.synthesis-credentials
+.synthesis_md-input/
+.synthesis-md-input/
+.synthesis_md_input/
+synthesis_md-input/
+.vercel/
+tooling.md
