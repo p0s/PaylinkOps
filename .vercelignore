@@ -1,0 +1,10 @@
+.git
+.next
+node_modules
+.local
+.secrets
+.vercel
+test-results
+playwright-report
+tsconfig.tsbuildinfo
+*.log

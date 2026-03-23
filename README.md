@@ -17,6 +17,14 @@ Primary track: MoonPay CLI Agents.
 
 Secondary track: OpenWallet Standard is a possible future extension if the wallet layer becomes strong enough to stand on its own.
 
+### Why this fits MoonPay CLI Agents
+
+The live Synthesis catalog says MoonPay wants agents that use MoonPay CLI as the primary action layer and do more than a basic demo. That is exactly what PaylinkOps does:
+
+- real mode uses the local MoonPay CLI for wallet discovery, deposit creation, deposit retrieval, and transaction inspection
+- the product is not a thin wrapper around one command; it adds operator workflows for receipts, reconciliation, and treasury follow-through
+- demo mode keeps the product useful when live credentials are unavailable, so judges can still exercise the full operator loop
+
 ## What is included
 
 - Landing page with a sponsor-aware pitch.
@@ -35,6 +43,12 @@ The repo now has a verified local MoonPay CLI flow using a repo-local authentica
 - Real deposit id: `69c0cc009ec7c7dbcfb5e50c`
 - Real deposit status: `active`
 - Real deposit URL: [moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9](https://moonpay.hel.io/embed/deposit/b19ac33d-e916-4a88-b12f-cfd25a93a9f9)
+- Real deposit retrieval through CLI was re-checked in this workspace on `2026-03-23`
+
+## Public demo
+
+- Production deployment: [paylinkops.vercel.app](https://paylinkops.vercel.app)
+- Deploy inspection: [vercel.com/we-lans-projects/paylinkops/7uxGacmw66FephEv1QaSku7g7hQ2](https://vercel.com/we-lans-projects/paylinkops/7uxGacmw66FephEv1QaSku7g7hQ2)
 
 ## On-chain evidence
 
@@ -50,6 +64,14 @@ The strongest public chain evidence currently available is the live destination 
 Important note:
 
 - A real MoonPay deposit link has been created, but no inbound on-chain payment transaction has been executed yet in this repo workflow, so there is no confirmed payment tx hash to show judges yet.
+
+## Core benefits
+
+- Gives agents and operators a narrow, useful MoonPay workflow instead of a generic wallet demo.
+- Makes MoonPay CLI outputs legible and auditable through stored receipts and operator-friendly views.
+- Separates a demo-safe path from the live CLI path, so the product stays judgeable even when live credentials are unavailable.
+- Keeps the proof chain honest: what is seeded, what is live, what is confirmed on-chain, and what is still missing.
+- Creates a practical bridge from paylink creation to reconciliation and treasury action, which is the real operational gap after a payment link exists.
 
 ## Local setup
 
@@ -147,7 +169,6 @@ The public repo includes a judge-safe submission bundle in `submission/` with no
 
 ## What is left before final submission
 
-- Optional but recommended public deployment URL.
 - Optional but recommended demo video URL.
 - A real incoming payment tx hash if you want stronger on-chain proof than wallet/deposit evidence alone.
 - Final human confirmation before Synthesis publish.

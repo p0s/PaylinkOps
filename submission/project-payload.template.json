@@ -1,15 +1,15 @@
 {
   "teamUUID": "FILL_FROM_PRIVATE_TEAM_CONTEXT",
   "name": "PaylinkOps",
-  "description": "A minimalist merchant operations console for AI agents and crypto-native teams that creates MoonPay deposit links, tracks incoming payments, reconciles receipts, and prepares treasury sweeps using MoonPay CLI as the real money rail.",
-  "problemStatement": "Crypto-native operators need a local-first way to create paylinks, observe payment arrival, reconcile receipts, and keep a durable audit trail without building a full accounting stack.",
+  "description": "PaylinkOps is a local-first merchant operations console for AI agents and crypto-native teams. It uses MoonPay CLI as the real execution layer for wallet discovery, live deposit creation, deposit retrieval, and transaction inspection, then wraps those actions in receipt-first operator workflows for reconciliation and treasury follow-through. Verified evidence already exists in this repo: MoonPay CLI 1.12.4, authenticated local session, live wallet alias `main`, active deposit id `69c0cc009ec7c7dbcfb5e50c`, and destination wallet explorer links.",
+  "problemStatement": "MoonPay gives agents real money rails, but operators still need a trustworthy surface around those rails. The painful gap is not whether an agent can create a paylink once; it is whether a team can track a live deposit, inspect transactions, reconcile what was expected vs what arrived, and preserve auditable receipts without falling back to ad hoc scripts and screenshots. PaylinkOps solves that exact MoonPay-shaped operations problem while keeping a demo-safe path for judgeability.",
   "repoURL": "https://github.com/p0s/PaylinkOps",
   "trackUUIDs": [
     "FILL_TRACK_UUIDS"
   ],
   "conversationLog": "See submission/demo-script.md and public repo history for the concise build narrative.",
   "submissionMetadata": "See submission/submission-metadata.json",
-  "deployedURL": "",
+  "deployedURL": "https://paylinkops.vercel.app",
   "videoURL": "",
   "pictures": "",
   "coverImageURL": ""
