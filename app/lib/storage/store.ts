@@ -12,6 +12,8 @@ import {
 } from '@/lib/types';
 import { buildSeededStore, seededLedgers, seededPaylinks, seededReceipts, seededTransactions, seededWallets } from '@/lib/storage/seed';
 
+let memoryStore: AppStore | null = null;
+
 function storeFile(): string {
   return path.resolve(process.cwd(), AppConfig.storePath);
 }
@@ -20,41 +22,54 @@ async function ensureDir(): Promise<void> {
   await fs.mkdir(path.dirname(storeFile()), { recursive: true });
 }
 
+function normalizeStore(store: AppStore): AppStore {
+  return {
+    ...initialStore(store.mode),
+    ...store,
+    wallets: store.wallets?.length ? store.wallets : seededWallets(),
+    paylinks: store.paylinks?.length ? store.paylinks : seededPaylinks(),
+    ledgers: store.ledgers?.length ? store.ledgers : seededLedgers(),
+    receipts: store.receipts?.length ? store.receipts : seededReceipts(),
+    transactions: store.transactions?.length ? store.transactions : seededTransactions(),
+    sweepPlans: store.sweepPlans ?? [],
+  };
+}
+
 export async function loadStore(): Promise<AppStore> {
   try {
     const raw = await fs.readFile(storeFile(), 'utf8');
     const parsed = JSON.parse(raw) as AppStore;
-
-    return {
-      ...initialStore(parsed.mode),
-      ...parsed,
-      wallets: parsed.wallets?.length ? parsed.wallets : seededWallets(),
-      paylinks: parsed.paylinks?.length ? parsed.paylinks : seededPaylinks(),
-      ledgers: parsed.ledgers?.length ? parsed.ledgers : seededLedgers(),
-      receipts: parsed.receipts?.length ? parsed.receipts : seededReceipts(),
-      transactions: parsed.transactions?.length ? parsed.transactions : seededTransactions(),
-      sweepPlans: parsed.sweepPlans ?? [],
-    };
+    const normalized = normalizeStore(parsed);
+    memoryStore = normalized;
+    return normalized;
   } catch {
-    const seeded = buildSeededStore();
-    await saveStore(seeded);
+    if (memoryStore) {
+      return normalizeStore(memoryStore);
+    }
+
+    const seeded = normalizeStore(buildSeededStore());
+    try {
+      await saveStore(seeded);
+    } catch {
+      memoryStore = seeded;
+    }
     return seeded;
   }
 }
 
 export async function saveStore(store: AppStore): Promise<void> {
-  await ensureDir();
-  const value: AppStore = {
+  const value: AppStore = normalizeStore({
     ...store,
     version: 1,
-    wallets: store.wallets.length ? store.wallets : seededWallets(),
-    paylinks: store.paylinks.length ? store.paylinks : seededPaylinks(),
-    ledgers: store.ledgers,
-    receipts: store.receipts,
-    transactions: store.transactions,
-    sweepPlans: store.sweepPlans ?? [],
-  };
-  await fs.writeFile(storeFile(), JSON.stringify(value, null, 2), 'utf8');
+  });
+  memoryStore = value;
+
+  try {
+    await ensureDir();
+    await fs.writeFile(storeFile(), JSON.stringify(value, null, 2), 'utf8');
+  } catch {
+    return;
+  }
 }
 
 export async function resetStoreToSeeded(): Promise<AppStore> {
