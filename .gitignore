@@ -9,7 +9,13 @@ node_modules/
 .next/
 test-results/
 playwright-report/
+coverage/
+dist/
+build/
+out/
+.cache/
 tsconfig.tsbuildinfo
+*.tsbuildinfo
 .secrets/
 .synthesis-credentials
 .synthesis_md-input/
@@ -19,3 +25,5 @@ synthesis_md-input/
 .vercel/
 tooling.md
 submission/
+submission.local.json
+submission.local.*
