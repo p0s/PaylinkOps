@@ -1,103 +1,89 @@
 # PaylinkOps
 
-PaylinkOps is a minimalist merchant operations console for AI agents and crypto-native teams. It creates MoonPay deposit links, tracks incoming payments, reconciles receipts, and prepares treasury sweeps.
+PaylinkOps is a merchant operations console for MoonPay-powered teams. It creates payment links, tracks incoming payments, reconciles receipts, and prepares treasury follow-up without turning the product into a broad accounting system.
 
-It has two modes:
+## Live Demo
 
-- `Demo mode` works out of the box with seeded wallets, paylinks, ledger entries, and receipts.
-- `Real mode` uses the local MoonPay CLI (`mp`) when it is installed and already authenticated on the user's machine.
+- Product site: [paylinkops.xyz](https://paylinkops.xyz)
+- Dashboard: [paylinkops.xyz/dashboard](https://paylinkops.xyz/dashboard)
 
-## Why it exists
+## What It Does
 
-The core promise is simple: create a payment link, track the money, and keep auditable receipts. That is the smallest useful MoonPay-shaped product that still demonstrates real CLI value instead of a generic wallet demo.
+- Creates and inspects MoonPay payment links.
+- Tracks wallet, paylink, ledger, and receipt state in one dashboard.
+- Provides deterministic demo data for a public-safe hosted experience.
+- Uses the local MoonPay CLI (`mp`) for real mode when it is installed and authenticated.
+- Keeps raw CLI output behind sanitized receipt objects instead of relying on terminal history.
 
-## Sponsor fit
+## Demo And Real Modes
 
-Primary track: MoonPay CLI Agents.
+`Demo mode` is the default public path. It uses seeded wallets, paylinks, ledger rows, and receipts so the product can be reviewed without credentials.
 
-Secondary track: OpenWallet Standard is only a possible future extension if the wallet layer becomes strong enough to stand on its own.
+`Real mode` runs locally against an authenticated MoonPay CLI. The web app does not ask users to paste MoonPay credentials; it only calls the local CLI when that environment is already configured.
 
-## What is included
-
-- Landing page with a clean sponsor-aware pitch.
-- Dashboard with mode switch, wallet status, paylinks, ledger, receipts, and settings.
-- Demo data that works without external services.
-- Real-mode CLI integration that detects `mp`, lists wallets, creates deposit links, and inspects deposits or transactions when available.
-- Receipt-first auditing for every action.
-- Sweep planning with explicit confirmation for execution.
-
-## Local setup
-
-1. Install dependencies.
-2. Install the MoonPay CLI if you want real mode.
-3. Authenticate the CLI in your terminal.
-4. Run the app.
+## Quick Start
 
 ```bash
 npm install
-npm install -g @moonpay/cli
-mp login --email YOUR_EMAIL
-mp verify --email YOUR_EMAIL --code YOUR_CODE
 npm run dev
 ```
 
-Real mode is intentionally handled outside the web app. The app only detects the local CLI and uses it if it is already authenticated.
+Open `http://localhost:3000/dashboard`.
 
-## Demo flow
+## Real Mode Setup
 
-1. Open `/`.
-2. Go to `/dashboard`.
-3. Stay in `Demo mode`.
-4. Create a demo paylink.
-5. Open the receipts page.
-6. Load the sample merchant scenario.
-7. Check the ledger.
+Install and authenticate MoonPay CLI outside of git-tracked files. A repo-local install also works:
 
-## Real flow
+```bash
+npm_config_cache=$PWD/.local/npm-cache npm install -g @moonpay/cli --prefix $PWD/.local/npm-global
+./.local/npm-global/bin/mp login --email YOUR_EMAIL
+./.local/npm-global/bin/mp verify --email YOUR_EMAIL --code YOUR_CODE
+```
 
-1. Install and authenticate `mp`.
-2. Switch to `Real mode` in settings or the dashboard.
-3. Refresh wallets.
-4. Create a live paylink.
-5. Inspect the paylink transactions.
-6. Keep the generated receipt as proof of the action.
+The app can resolve `.local/npm-global/bin/mp` and use ignored `.local/` state. Do not commit CLI auth state, logs, `.env.local`, `.local/`, `.secrets/`, or `.vercel/`.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-  A["Landing page"] --> B["Dashboard"]
-  B --> C["Mode switch"]
-  B --> D["Wallets"]
-  B --> E["Paylinks"]
-  B --> F["Receipts"]
-  B --> G["Ledger"]
-  B --> H["Settings"]
-  E --> I["Demo adapter"]
-  E --> J["MoonPay CLI adapter"]
-  J --> K["Local mp binary"]
-  I --> L["Seeded local JSON state"]
-  J --> L
+  Landing["Landing page"] --> Dashboard["Dashboard"]
+  Dashboard --> Wallets["Wallets"]
+  Dashboard --> Paylinks["Paylinks"]
+  Dashboard --> Ledger["Ledger"]
+  Dashboard --> Receipts["Receipts"]
+  Paylinks --> Demo["Demo adapter"]
+  Paylinks --> CLI["MoonPay CLI adapter"]
+  CLI --> MP["Local mp binary"]
+  Demo --> Store["Local JSON store"]
+  CLI --> Store
 ```
 
-## Static assets
+## Public Proof
 
-- Cover image: `public/cover.png`
-- Additional cover source: `public/cover.svg`
-- Screenshot assets: `public/screenshots/`
+This repo includes public proof artifacts from a real MoonPay-oriented flow:
 
-## Submission assets
+- Live destination wallet: `0x870F29bD50CE5fe3e29437BB46a000318B07aA47`
+- Ethereum explorer: [etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47](https://etherscan.io/address/0x870F29bD50CE5fe3e29437BB46a000318B07aA47)
+- Confirmed inbound payment: [etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54](https://etherscan.io/tx/0x06d391316044787ee27c790dc797b6ccfc7a796eac02725f508457dfa9d54c54)
+- Live deposit id: `69c0cc009ec7c7dbcfb5e50c`
 
-Submission-specific metadata, team identifiers, project identifiers, and publish notes are intentionally kept in a local gitignored `submission/` folder when needed. Do not commit live submission payloads or other private operational context to the public repo.
+Private submission payloads and live operational notes belong in ignored local files, not in git.
 
-## Honest limitations
+## Scripts
 
-- Real mode requires local `mp` authentication.
-- Final Synthesis submit is intentionally blocked until the user confirms it in the active session.
-- The screenshot assets here are capture targets and placeholders; replace them with real captures before final submission if needed.
+```bash
+npm run lint
+npm run typecheck
+npm run test:unit
+npm run build
+npm run test:smoke
+npm run test:e2e
+```
 
-## Future work
+`npm run test:e2e:orbstack` is available as a local fallback when host browser downloads are unreliable.
 
-- Better real-mode transaction parsing from broader MoonPay CLI output shapes.
-- Optional sweep execution behind the existing confirmation gate.
-- CSV export for ledger and receipts.
+## Limits
+
+- Real mode depends on MoonPay CLI availability and local authentication.
+- Public hosted mode is demo-first and does not carry private CLI session state.
+- The app focuses on paylink operations and reconciliation; it is not full accounting software.

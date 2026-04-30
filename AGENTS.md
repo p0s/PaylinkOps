@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Repository operating rules for `OWSpolicywallet`.
+Repository operating rules for `PaylinkOps`.
 
 ## Product alignment
 

@@ -1,4 +1,4 @@
-# spec.md — PaylinkOps (MoonPay)
+# SPEC.md - PaylinkOps (MoonPay)
 
 ## 0) Read this first
 
@@ -233,7 +233,7 @@ paylinkops/
     e2e/
   .env.example
   README.md
-  spec.md
+  SPEC.md
 ```
 
 ---
