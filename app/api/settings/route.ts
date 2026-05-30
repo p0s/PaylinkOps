@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAllowLiveSweeps, setAllowLiveSweeps } from '@/lib/storage/store';
+import { requireAdminMutationAuth } from '@/lib/security';
 
 export async function GET() {
   const allowLiveSweeps = await getAllowLiveSweeps();
@@ -7,6 +8,9 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  const authError = requireAdminMutationAuth(req);
+  if (authError) return authError;
+
   const payload = (await req.json().catch(() => ({}))) as { allowLiveSweeps?: boolean };
   const value = payload.allowLiveSweeps;
   if (typeof value !== 'boolean') {

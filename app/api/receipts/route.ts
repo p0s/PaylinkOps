@@ -1,8 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { loadStore } from '@/lib/storage/store';
+import { requireAdminMutationAuth } from '@/lib/security';
 
 export async function GET(req: NextRequest) {
   const mode = req.nextUrl.searchParams.get('mode') as string | null;
+  if (mode === 'real') {
+    const authError = requireAdminMutationAuth(req, 'Real MoonPay receipts require PAYLINKOPS_ADMIN_TOKEN.');
+    if (authError) return authError;
+  }
+
   const type = req.nextUrl.searchParams.get('type');
   const store = await loadStore();
 

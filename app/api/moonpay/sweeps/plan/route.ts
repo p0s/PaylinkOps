@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getRequestMode, safeJson } from '@/lib/request';
 import { planSweep } from '@/lib/operations';
+import { requireLiveModeAuth } from '@/lib/security';
 
 export async function POST(req: NextRequest) {
   const mode = await getRequestMode(req);
+  const authError = requireLiveModeAuth(req, mode);
+  if (authError) return authError;
+
   const payload = await safeJson(req);
 
   if (typeof payload.walletAlias !== 'string' || typeof payload.destinationAddress !== 'string') {

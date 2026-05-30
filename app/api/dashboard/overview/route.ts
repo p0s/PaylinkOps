@@ -2,9 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { loadStore } from '@/lib/storage/store';
 import { getRequestMode } from '@/lib/request';
 import { getAdapter } from '@/lib/moonpay/index';
+import { requireLiveModeAuth } from '@/lib/security';
 
 export async function GET(req: NextRequest) {
   const mode = await getRequestMode(req);
+  const authError = requireLiveModeAuth(req, mode);
+  if (authError) return authError;
+
   const store = await loadStore();
   const adapter = await getAdapter(mode);
   const wallets = await adapter.listWallets();

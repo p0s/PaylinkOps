@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getRequestMode, safeJson } from '@/lib/request';
 import { getAdapter } from '@/lib/moonpay/index';
+import { requireLiveModeAuth } from '@/lib/security';
 
 export async function POST(req: NextRequest) {
   const mode = await getRequestMode(req);
+  const authError = requireLiveModeAuth(req, mode);
+  if (authError) return authError;
+
   const payload = await safeJson(req);
   const confirm = String(payload.confirmPhrase || '').trim();
 

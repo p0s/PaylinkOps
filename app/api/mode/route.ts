@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getMode, setMode } from '@/lib/mode';
 import { getRequestMode, safeJson } from '@/lib/request';
+import { requireAdminMutationAuth } from '@/lib/security';
 
 export async function GET() {
   const mode = await getMode();
@@ -8,6 +9,9 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  const authError = requireAdminMutationAuth(req);
+  if (authError) return authError;
+
   const payload = await safeJson(req);
   const requested = (payload.mode as string) || (await getRequestMode(req));
 

@@ -2,9 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getRequestMode, safeJson } from '@/lib/request';
 import { createPaylinkSchema } from '@/lib/types';
 import { createPaylink as runCreatePaylink } from '@/lib/operations';
+import { requireLiveModeAuth } from '@/lib/security';
 
 export async function POST(req: NextRequest) {
   const mode = await getRequestMode(req);
+  const authError = requireLiveModeAuth(req, mode);
+  if (authError) return authError;
+
   const payload = await safeJson(req);
 
   const parsed = createPaylinkSchema.safeParse(payload);
